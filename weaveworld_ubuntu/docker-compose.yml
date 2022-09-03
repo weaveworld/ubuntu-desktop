@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+
+  ubuntu:
+    image: "weaveworld/ubuntu:u20-20220901"  
+    build:
+      context: .
+      dockerfile: Dockerfile
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+firefox -version
+google-chrome -version
+microsoft-edge -version
+echo "GeckoDriver $(cat /etc/geckodriver-version)"
+echo "ChromeDriver $(cat /etc/chromedriver-version)"
+echo "EdgeDriver $(cat /etc/msedgedriver-version)"

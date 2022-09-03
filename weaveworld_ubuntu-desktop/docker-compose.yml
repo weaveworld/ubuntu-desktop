@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+
+  desktop:
+    image: "weaveworld/ubuntu-desktop:u20-20220901"  
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:  
+      - 7900:7900
+      - 5900:5900
+
