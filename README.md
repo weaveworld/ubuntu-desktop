@@ -4,7 +4,9 @@
 
 **[Ubuntu Desktop](https://en.wikipedia.org/wiki/Ubuntu_version_history#Ubuntu_20.04_LTS_(Focal_Fossa))** (LXDE) docker image with **[Firefox](https://www.mozilla.org/en-US/firefox/)**, **[Chrome](https://www.google.com/chrome/)** and **[Edge](https://www.microsoft.com/en-us/edge)** browsers.
 
-The user is `app` (1111:1111), having the `/home/app` home directory.
+Dockerhub: https://hub.docker.com/repository/docker/weaveworld/ubuntu-desktop
+
+The user is `app` (`1111:1111`), having the `/home/app` home directory.
 
 Access:
   - novnc port: `7900` ; e. g., http://localhost:7900/vnc_auto.html
@@ -30,6 +32,8 @@ services:
 
 **[Ubuntu Desktop](https://en.wikipedia.org/wiki/Ubuntu_version_history#Ubuntu_20.04_LTS_(Focal_Fossa))** (LXDE) docker image with **[Firefox](https://www.mozilla.org/en-US/firefox/)**, **[Chrome](https://www.google.com/chrome/)** and **[Edge](https://www.microsoft.com/en-us/edge)** browsers and the corresponding **[Selenium](https://www.selenium.dev/) [WebDrivers](https://www.selenium.dev/documentation/webdriver/)**, i. e., **[GeckoDriver](https://github.com/mozilla/geckodriver)**, **[ChromeDriver](https://chromedriver.chromium.org/)** and **[EdgeDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)**, that are accessible by the Selenium **[Remote WebDriver](https://www.selenium.dev/documentation/webdriver/remote_webdriver/)** using the Selenium Server.
 
+Dockerhub: https://hub.docker.com/repository/docker/weaveworld/selenium
+
 Example:
   - `docker-compose.yml`
 ```docker-compose.yml
@@ -52,7 +56,9 @@ WebDriver driver = new RemoteWebDriver(new URL("http://host.docker.internal:4444
 driver.get("http://www.google.com");
 driver.quit();
 ```  
-- use `ChromeOptions` or `EdgeOptions` with the same `:4444` port
+- use `ChromeOptions` for Chrome or `EdgeOptions` for Edge with the same `:4444` port
+- get browser and driver version info:<br>
+`docker run -it --rm weaveworld/selenium:u20-20220901 /etc/selenium_info`
 - end: `docker-compose down`
 
 ## Images

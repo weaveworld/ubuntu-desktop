@@ -1,3 +1,5 @@
 # Selenium `(weaveworld/selenium)`
 
 **[Ubuntu Desktop](https://en.wikipedia.org/wiki/Ubuntu_version_history#Ubuntu_20.04_LTS_(Focal_Fossa))** (LXDE) docker image with **[Firefox](https://www.mozilla.org/en-US/firefox/)**, **[Chrome](https://www.google.com/chrome/)** and **[Edge](https://www.microsoft.com/en-us/edge)** browsers and the corresponding **[Selenium](https://www.selenium.dev/) [WebDrivers](https://www.selenium.dev/documentation/webdriver/)**, i. e., **[GeckoDriver](https://github.com/mozilla/geckodriver)**, **[ChromeDriver](https://chromedriver.chromium.org/)** and **[EdgeDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)**, that are accessible by the Selenium **[Remote WebDriver](https://www.selenium.dev/documentation/webdriver/remote_webdriver/)** using the Selenium Server.
+
+See: [Selenium (weaveworld/selenium)](../#selenium-weaveworldselenium)
