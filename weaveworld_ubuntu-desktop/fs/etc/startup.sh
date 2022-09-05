@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# supervisord
 sudo sed -i \
         -e "s|%(ENV_USER)s|$USER|" \
         -e "s|%(ENV_HOME)s|$HOME|" \
