@@ -23,6 +23,7 @@ services:
     ports:
       - 7900:7900
       - 5900:5900
+    shm_size: '2gb'
 ```  
 - start: `docker-compose up -d`
 - visit: http://localhost:7900/vnc_auto.html
@@ -46,6 +47,7 @@ services:
       - 7900:7900
       - 5900:5900
       - 4444:4444
+    shm_size: '2gb'
 ```  
 - start: `docker-compose up -d`
 - visit: http://localhost:7900/vnc_auto.html
@@ -69,5 +71,5 @@ driver.quit();
 
 Docker image tag format: `u`*<sup>{{ubuntu}}</sup>*`-`*<sup>{{date}}</sup>*
   - *<sup>{{ubuntu}}</sup>* - Ubuntu version
-  - *<sup>{{date}}</sup>* - updated at date
+  - *<sup>{{date}}</sup>* - version-date
   - e. g., `ubuntu-desktop:u20-20220901` 

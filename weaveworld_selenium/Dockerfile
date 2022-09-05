@@ -1,4 +1,5 @@
-FROM weaveworld/ubuntu-desktop:u20-20220901
+ARG DATE_VERSION=20220901
+FROM weaveworld/ubuntu-desktop:u20-${DATE_VERSION}
 
 USER root
 
