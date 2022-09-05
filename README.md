@@ -24,6 +24,9 @@ services:
       - 7900:7900
       - 5900:5900
     shm_size: '2gb'
+    environment:
+      - DISPLAY_WIDTH=1024
+      - DISPLAY_HEIGHT=768
 ```  
 - start: `docker-compose up -d`
 - visit: http://localhost:7900/vnc_auto.html
