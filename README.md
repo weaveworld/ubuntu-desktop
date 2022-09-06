@@ -69,6 +69,7 @@ driver.quit();
 ## Images
 
   - [weaveworld/ubuntu](weaveworld_ubuntu) - base ubuntu docker image
+  - [weaveworld/graal-app](weaveworld_graal-app) - Building and running GraalVM based applications
   - [weaveworld/ubuntu-desktop](weaveworld_ubuntu-desktop) - Ubuntu Desktop with Firefox, Chrome and Edge browsers 
   - [weaveworld/selenium](weaveworld_selenium) - Ubuntu Desktop with browsers and selenium drivers 
 
