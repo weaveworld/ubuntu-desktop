@@ -11,14 +11,16 @@ sudo sed -i \
 sudo /usr/bin/supervisord -n --configuration /etc/supervisor/supervisord.conf &
 
 SUPERVISOR_PID=$!
-
 function shutdown {
-    echo "Trapped SIGTERM/SIGINT/x so shutting down supervisord..."
-    kill -s SIGTERM ${SUPERVISOR_PID}
+    echo "SIGTERM/SIGINT: shutting down supervisord"
+    sudo kill -s SIGTERM ${SUPERVISOR_PID}
     wait ${SUPERVISOR_PID}
     echo "Shutdown complete"
 }
-
 trap shutdown SIGTERM SIGINT
-wait ${SUPERVISOR_PID}
 
+if [ $# -eq 0 ]; then wait ${SUPERVISOR_PID}; exit 0; fi
+
+if [ "$1" = "-" ]; then exit 0; fi
+
+exec -a "$0" "$@"
