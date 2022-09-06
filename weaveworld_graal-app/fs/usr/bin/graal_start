@@ -1,0 +1,21 @@
+#!/bin/bash 
+if [ -f "/app/_graal_clean.sh" ]; then 
+. /app/_graal_clean.sh 
+S=$?; if [ $? -ne 0 ]; then exit $S; fi 
+fi 
+if [ -f "/app/_graal_build.sh" ]; then 
+. /app/_graal_build.sh 
+S=$?; if [ $? -ne 0 ]; then exit $S; fi 
+fi 
+if [ -f "/app/_graal_run.sh" ]; then 
+. /app/_graal_run.sh 
+S=$?; if [ $? -ne 0 ]; then exit $S; fi 
+fi 
+if [ -f "/app/_graal_app.sh" ]; then 
+. /app/_graal_app.sh 
+S=$?; if [ $? -ne 0 ]; then exit $S; fi 
+fi 
+if [ -f "/app/_graal_done.sh" ]; then 
+. /app/_graal_done.sh 
+S=$?; if [ $? -ne 0 ]; then exit $S; fi 
+fi

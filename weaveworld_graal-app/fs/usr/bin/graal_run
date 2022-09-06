@@ -1,0 +1,2 @@
+#!/bin/bash 
+. /app/_graal_run.sh
