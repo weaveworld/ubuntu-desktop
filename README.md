@@ -16,7 +16,7 @@ Start a docker container:
 ```
 docker run -d -p 7900:7900 --shm-size="2g" --rm --name udesk weaveworld/ubuntu-desktop
 ```
-  - To stop the container use: `docker stop udesk`
+  - To stop the container:<br>`docker stop udesk`
 
 An example `docker-compose.yml`
 ```docker-compose.yml
@@ -24,7 +24,7 @@ version: "3.8"
 
 services:
   desktop:
-    image: "weaveworld/ubuntu-desktop:u20-20220901"  
+    image: "weaveworld/ubuntu-desktop"  
     ports:
       - 7900:7900
       - 5900:5900
