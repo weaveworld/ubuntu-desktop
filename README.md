@@ -6,6 +6,8 @@
 
 DockerHub: https://hub.docker.com/repository/docker/weaveworld/ubuntu-desktop
 
+![docker-desktop](_resource/ubuntu-desktop.gif)
+
 The user is `app` (`1111:1111`) of the `/home/app` home directory.
 
 Access:
