@@ -6,9 +6,9 @@
 
 DockerHub: https://hub.docker.com/repository/docker/weaveworld/ubuntu-desktop
 
-[<img src="_resource/ubuntu-desktop.gif" alt="Click to see the video" style="float:right; margin: 0 0 0 2rem;" width="500"></img>](https://www.youtube.com/watch?v=Hc79sDi3f0U)
+[<img src="_resource/ubuntu-desktop.gif" alt="Click to see the video" width="500"></img>](https://www.youtube.com/watch?v=kRV7d2OR07k)
 
-See the [*video*](https://www.youtube.com/watch?v=Hc79sDi3f0U).
+See the [*video*](https://www.youtube.com/watch?v=kRV7d2OR07k).
 
 The user is `app` (`1111:1111`) of the `/home/app` home directory.
 
