@@ -28,7 +28,7 @@ version: "3.8"
 
 services:
   desktop:
-    image: "weaveworld/ubuntu-desktop"  
+    image: "weaveworld/ubuntu-desktop"
     ports:
       - 7900:7900
       - 5900:5900
@@ -37,7 +37,7 @@ services:
     environment:
       - DISPLAY_WIDTH=1024
       - DISPLAY_HEIGHT=768
-```  
+```
 - start: `docker-compose up -d`
 - visit: http://localhost:7900/vnc_auto.html
 - end: `docker-compose down`
@@ -45,7 +45,7 @@ services:
 
 ## Selenium `(weaveworld/selenium)`
 
-**[Ubuntu Desktop](https://en.wikipedia.org/wiki/Ubuntu_version_history#Ubuntu_20.04_LTS_(Focal_Fossa))** (LXDE) docker image with **[Firefox](https://www.mozilla.org/en-US/firefox/)**, **[Chrome](https://www.google.com/chrome/)** and **[Edge](https://www.microsoft.com/en-us/edge)** browsers and **[Selenium](https://www.selenium.dev/) [drivers](https://www.selenium.dev/documentation/webdriver/)** (**[GeckoDriver](https://github.com/mozilla/geckodriver)**, **[ChromeDriver](https://chromedriver.chromium.org/)**, **[EdgeDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)**) and Selenium Server, that are accessible by the **[Remote WebDriver](https://www.selenium.dev/documentation/webdriver/remote_webdriver/)**.
+**[Ubuntu Desktop](https://en.wikipedia.org/wiki/Ubuntu_version_history#Ubuntu_20.04_LTS_(Focal_Fossa))** (LXDE) docker image with **[Firefox](https://www.mozilla.org/en-US/firefox/)**, **[Chrome](https://www.google.com/chrome/)** and **[Edge](https://www.microsoft.com/en-us/edge)** browsers, **[Selenium](https://www.selenium.dev/) [drivers](https://www.selenium.dev/documentation/webdriver/)** (**[GeckoDriver](https://github.com/mozilla/geckodriver)**, **[ChromeDriver](https://chromedriver.chromium.org/)**, **[EdgeDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)**) and Selenium Server, that are accessible by the **[Remote WebDriver](https://www.selenium.dev/documentation/webdriver/remote_webdriver/)**.
 
 Dockerhub: https://hub.docker.com/repository/docker/weaveworld/selenium
 
@@ -56,13 +56,13 @@ version: "3.8"
 
 services:
   desktop:
-    image: "weaveworld/selenium"  
+    image: "weaveworld/selenium"
     ports:
       - 7900:7900
       - 5900:5900
       - 4444:4444
     shm_size: '2gb'
-```  
+```
 - start: `docker-compose up -d`
 - visit: http://localhost:7900/vnc_auto.html
 - connect:
@@ -71,7 +71,7 @@ FirefoxOptions firefoxOptions = new FirefoxOptions();
 WebDriver driver = new RemoteWebDriver(new URL("http://desktop:4444"), firefoxOptions);
 driver.get("http://www.google.com");
 driver.quit();
-```  
+```
 - use `ChromeOptions` for Chrome or `EdgeOptions` for Edge with the same `:4444` port
 - get browser and driver version info:<br>
 `docker run -it --rm weaveworld/selenium /etc/selenium_info`
@@ -79,16 +79,16 @@ driver.quit();
 
 ## Docker Images
 
-  - [weaveworld/ubuntu](weaveworld_ubuntu) - base ubuntu docker image
+  - [weaveworld/ubuntu](weaveworld_ubuntu) - base Ubuntu docker image
     - DockerHub: https://hub.docker.com/repository/docker/weaveworld/ubuntu
   - [weaveworld/graal-app](weaveworld_graal-app) - Building and running GraalVM based applications
     - DockerHub: https://hub.docker.com/repository/docker/weaveworld/graal-app
-  - [weaveworld/ubuntu-desktop](weaveworld_ubuntu-desktop) - Ubuntu Desktop with Firefox, Chrome and Edge browsers 
+  - [weaveworld/ubuntu-desktop](weaveworld_ubuntu-desktop) - Ubuntu Desktop with Firefox, Chrome and Edge browsers
     - DockerHub: https://hub.docker.com/repository/docker/weaveworld/ubuntu-deskto
-  - [weaveworld/selenium](weaveworld_selenium) - Ubuntu Desktop with browsers, Selenium drivers and Server 
+  - [weaveworld/selenium](weaveworld_selenium) - Ubuntu Desktop with browsers, Selenium drivers and Server
     - DockerHub: https://hub.docker.com/repository/docker/weaveworld/selenium
 
 Docker image tag format: `u`*<sup>{{ubuntu}}</sup>*`-`*<sup>{{date}}</sup>*
   - *<sup>{{ubuntu}}</sup>* - Ubuntu version
   - *<sup>{{date}}</sup>* - version-date
-  - e. g., `ubuntu-desktop:u20-20220901` 
+  - e. g., `ubuntu-desktop:u20-20220901`
